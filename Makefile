@@ -4,7 +4,7 @@ GPP := g++
 all: speederv2
 
 %.o: %.cpp Makefile
-	@echo "  CPP $@"
+	@echo "  G++ $@"
 	@$(GPP) $(CFLAGS) -c -o $@ $< -Os -Wno-unused-result -I. -isystem libev
 
 speederv2: main.o log.o common.o lib/fec.o lib/rs.o packet.o delay_manager.o fd_manager.o connection.o fec_manager.o misc.o tunnel_client.o tunnel_server.o my_ev.o
